@@ -1,0 +1,56 @@
+.albums {
+    padding-top: 5px;
+    &__header {
+        padding: 10px;
+        background-color: #0c5656;
+        color: white;
+        width: 100%;
+        & span {
+            font-weight: 500;
+        }
+    }
+    &__card {
+        margin-bottom: 10px;
+    }
+    &__slider {
+        padding: 10px 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        grid-column-gap: 5%;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            width: 10px;
+            /* ширина для вертикального скролла */
+            height: 8px;
+            /* высота для горизонтального скролла */
+            background-color: #b5b9bd;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #0c5656;
+            border-radius: 9em;
+            box-shadow: inset 1px 1px 10px #0c5656;
+        }
+    }
+    &__img {
+        position: relative;
+        min-width: 20vw;
+        height: 150px;
+        background-size: cover;
+        background-image: url("../../img/album.jpg");
+    }
+    &__name {
+        position: absolute;
+        bottom: 0;
+        padding: 2px 2px;
+        font-size: 15px;
+        background: #00000066;
+        width: 100%;
+        color: white;
+        text-transform: lowercase;
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+}

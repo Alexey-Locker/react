@@ -1,0 +1,124 @@
+@import "./Header.scss";
+@import "./Main.scss";
+#root {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.form {
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    animation: 0.2s linear shadow forwards;
+    background-color: rgba(63, 59, 59, 0.472);
+    & form {
+        min-width: 35%;
+        min-height: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px 5px;
+        border-radius: 10px;
+        background-color: white;
+    }
+    & p {
+        width: 400px;
+        text-align: left;
+        margin-bottom: 5%;
+        font-weight: 700;
+    }
+    &__data {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+        p {
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+        & input {
+            padding: 5px 10px;
+            width: 400px;
+            border: 1px solid black;
+            margin-bottom: 10%;
+            &:focus {
+                outline: none;
+            }
+        }
+        & :last-child {
+            margin-bottom: 0px;
+        }
+    }
+    &__controls {
+        display: flex;
+        justify-content: flex-end;
+        width: 400px;
+        & input {
+            width: 60px;
+            border: 1px solid black;
+            padding: 2px 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.form.black {
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    & form {
+        background-color: black;
+    }
+    & input {
+        background: black;
+        border: 1px solid white;
+        color: white;
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+            -webkit-text-fill-color: white;
+        }
+    }
+}
+
+.form.lunar {
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    & form {
+        background-color: #080707;
+        ;
+    }
+    & input {
+        background: #080707;
+        border: 1px solid white;
+        color: white;
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px #080707 inset;
+            -webkit-text-fill-color: white;
+        }
+    }
+}
+
+@keyframes shadow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

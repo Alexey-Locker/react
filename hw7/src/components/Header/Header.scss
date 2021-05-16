@@ -1,0 +1,38 @@
+header {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & nav {
+        & ul {
+            display: flex;
+            & li {
+                list-style: none;
+                margin-right: 5px;
+                font-weight: 500;
+                & a:any-link {
+                    color: black;
+                }
+                & a {
+                    text-decoration: none;
+                    position: relative;
+                    &.active::after {
+                        position: absolute;
+                        font-weight: 600;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        content: "";
+                        display: inline-block;
+                        height: 1px;
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+    & h1 {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+}

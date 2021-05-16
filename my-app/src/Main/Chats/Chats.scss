@@ -1,0 +1,31 @@
+.chats {
+    &__card {
+        display: flex;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    &__avatar {
+        width: 55px;
+        height: 55px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+    &__description {
+        display: grid;
+        padding-left: 0.63vw;
+        grid-template-rows: 25px;
+        padding-top: 9px;
+    }
+    &__name {
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+    }
+    &__last-msg {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        font-family: Tahoma, sans-serif, Arial, Helvetica;
+    }
+}

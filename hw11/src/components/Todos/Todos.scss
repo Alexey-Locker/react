@@ -1,0 +1,40 @@
+.todos {
+    width: 100%;
+    & ul {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
+        justify-content: space-between;
+        & li {
+            border: 1px solid black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: rgb(255, 217, 0);
+            & div {
+                & svg {
+                    cursor: pointer;
+                }
+                display: flex;
+            }
+        }
+    }
+    &_active {
+        background-color: rgb(27, 189, 27) !important;
+    }
+    &__head {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 20px;
+        & svg {
+            margin-left: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}

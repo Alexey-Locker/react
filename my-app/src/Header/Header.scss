@@ -1,0 +1,116 @@
+.header {
+    padding: 10px 4vw 10px 4.6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__user {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        & p {
+            margin-left: 1.62vw;
+        }
+
+    }
+
+    &__avatar {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    &__menu {
+        display: flex;
+
+        &>ul {
+            display: flex;
+            transition: 1s;
+            opacity: 0;
+            visibility: hidden;
+            padding: 0;
+
+            & li {
+                list-style: none;
+                margin-right: 0.7vw;
+            }
+        }
+
+        &-wrapper {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+
+            &>span {
+                width: 33px;
+                height: 4px;
+                background-color: black;
+                background-color: white;
+                transition: 0.2s;
+                transition-delay: 0.5s;
+                position: relative;
+
+                &::before {
+                    display: inline-block;
+                    bottom: 8px;
+                    position: absolute;
+                    content: "";
+                    width: 33px;
+                    height: 4px;
+                    background-color: white;
+                    transition: 1s;
+                }
+
+                &::after {
+                    display: inline-block;
+                    top: 8px;
+                    position: absolute;
+                    content: "";
+                    width: 33px;
+                    height: 4px;
+                    background-color: white;
+                    transition: 1s;
+                }
+            }
+        }
+
+        &>input {
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+
+            &:checked~ul {
+                opacity: 1;
+                visibility: unset;
+                transition: 1s;
+            }
+
+            &:checked~.header__menu-wrapper span {
+                height: 0;
+                transition: 0.1s;
+            }
+
+            &:checked~.header__menu-wrapper span::before {
+                transform: rotate(45deg);
+                bottom: 0;
+                transition: 1s;
+            }
+
+            &:checked~.header__menu-wrapper span::after {
+                transform: rotate(-45deg);
+                top: -4px;
+                transition: 1s;
+            }
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        font-family: arial, sans-serif;
+        color: white;
+        font-size: 15px;
+    }
+}

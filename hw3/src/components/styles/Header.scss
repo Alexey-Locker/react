@@ -1,0 +1,23 @@
+.header{
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5vw;
+    background-color: #081221cf;
+    align-items: center;
+    & h1{
+       font-family: 'Roboto', sans-serif;
+       text-transform: uppercase;
+       color:white;      
+    }
+    & p{
+       
+       cursor: pointer;
+       font-size: 21px;
+       padding: 2px 8px;
+       background: white;
+       border-radius: 5px;
+       color:#16b916;
+    }
+
+}

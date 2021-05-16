@@ -1,0 +1,21 @@
+.content {
+    margin: 0 4vw;
+    box-shadow: -1px 10px 10px #615a5a, 1px 10px 10px #615a5a, 0px 1px 10px #615a5a;
+    height: calc(90vh - 70px);
+    display: flex;
+
+    &__chats {
+        width: 30%;
+        box-shadow: inset 1px 0px 6px black;
+        ;
+        height: 100%;
+        padding-top: 10px;
+        padding-left: 0.6vw;
+        padding-right: 0.24vw;
+    }
+
+    &__history {
+        width: 100%;
+        height: 100%;
+    }
+}

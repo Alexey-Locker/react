@@ -1,0 +1,64 @@
+.users {
+    width: 100%;
+    min-height: 90vh;
+    padding: 5px 10vw 5px 5vw;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 10px;
+    &__head {
+        width: 100%;
+        cursor: pointer;
+    }
+    &__details {
+        padding: 0 15px;
+        overflow: hidden;
+        border: 1px solid #0c5656;
+        padding-left: 10px;
+        max-height: 0;
+        &_active {
+            animation: 1.5s size_width_open ease-in-out both;
+        }
+        &_hiden {
+            animation: 1s size_width_close linear both;
+        }
+        & div {
+            padding-top: 15px;
+            & p {
+                box-sizing: content-box;
+                padding: 1px;
+                & span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.head {
+    padding: 10px;
+    background-color: #0c5656;
+    color: white;
+    & span {
+        font-weight: 500;
+    }
+}
+
+@keyframes size_width_open {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 400px;
+    }
+}
+
+@keyframes size_width_close {
+    0% {
+        max-height: 400px;
+    }
+    100% {
+        max-height: 0;
+    }
+}
